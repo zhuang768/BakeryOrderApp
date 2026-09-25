@@ -12,12 +12,6 @@ const links = [
 export function Layout() {
   return (
     <div className="app-shell">
-      <aside className="desktop-sidebar" aria-label="系統資訊">
-        <div className="desktop-brand">
-          <strong>光埔店</strong>
-          <span>專屬叫貨系統</span>
-        </div>
-      </aside>
       <main className="main">
         <Outlet />
       </main>

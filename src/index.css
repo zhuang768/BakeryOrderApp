@@ -81,9 +81,6 @@ h2 {
 .app-shell {
   min-height: 100dvh;
 }
-.desktop-sidebar {
-  display: none;
-}
 .main {
   width: min(820px, 100%);
   margin: 0 auto;
@@ -289,9 +286,12 @@ h2 {
 }
 .tabbar {
   position: fixed;
-  left: 0;
-  right: 0;
+  left: 50%;
+  right: auto;
   bottom: 0;
+  z-index: 15;
+  width: min(820px, 100%);
+  transform: translateX(-50%);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   background: var(--surface);
@@ -416,63 +416,9 @@ h2 {
   }
 }
 @media (min-width: 960px) {
-  .app-shell {
-    display: grid;
-    grid-template-columns: 220px minmax(0, 1fr);
-  }
-  .desktop-sidebar {
-    position: fixed;
-    inset: 0 auto 0 0;
-    z-index: 10;
-    display: block;
-    width: 220px;
-    background: #eceeef;
-    border-right: 1px solid var(--line);
-    padding: 28px 22px;
-  }
-  .desktop-brand {
-    display: grid;
-    gap: 3px;
-  }
-  .desktop-brand strong {
-    font-size: 1.08rem;
-    letter-spacing: 0.02em;
-  }
-  .desktop-brand span {
-    color: var(--ink-soft);
-    font-size: 0.82rem;
-  }
   .main {
-    grid-column: 2;
     width: min(1040px, 100%);
-    padding: 38px 44px 64px;
-  }
-  .tabbar {
-    inset: 94px auto auto 0;
-    z-index: 11;
-    width: 220px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 4px;
-    border: 0;
-    background: transparent;
-    padding: 0 12px;
-  }
-  .tab {
-    grid-template-columns: 24px 1fr;
-    justify-items: start;
-    align-content: center;
-    align-items: center;
-    min-height: 48px;
-    padding: 0 12px;
-    border: 0;
-    border-radius: 9px;
-    font-size: 0.92rem;
-  }
-  .tab.active {
-    color: var(--ink);
-    background: var(--surface);
-    border: 0;
+    padding: 38px 44px 120px;
   }
   .sticky-actions {
     bottom: 0;
