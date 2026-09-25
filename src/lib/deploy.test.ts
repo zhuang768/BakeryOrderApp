@@ -21,8 +21,8 @@ describe("示範資料與部署檔", () => {
     expect(config).toContain("pwa-192.png");
     expect(config).toContain("pwa-512.png");
     expect(config).toContain("pwa-maskable-512.png");
-    expect(config).toContain('sizes: "384x384"');
-    expect(config).toContain('sizes: "1024x1024"');
+    expect(config).toContain('sizes: "192x192"');
+    expect(config).toContain('sizes: "512x512"');
     expect(config).toContain('start_url: "/"');
     expect(config).toContain('navigateFallback: "/index.html"');
   });

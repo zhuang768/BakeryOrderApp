@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.svg", "apple-touch-icon.png"],
+      includeAssets: ["favicon.png", "apple-touch-icon.png"],
       manifest: {
         name: "光埔店專屬叫貨系統",
         short_name: "光埔店叫貨",
@@ -20,11 +20,11 @@ export default defineConfig({
         background_color: "#FFFFFF",
         theme_color: "#1A1A1A",
         icons: [
-          { src: "pwa-192.png", sizes: "384x384", type: "image/png", purpose: "any" },
-          { src: "pwa-512.png", sizes: "1024x1024", type: "image/png", purpose: "any" },
+          { src: "pwa-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
+          { src: "pwa-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
           {
             src: "pwa-maskable-512.png",
-            sizes: "1024x1024",
+            sizes: "512x512",
             type: "image/png",
             purpose: "maskable",
           },
