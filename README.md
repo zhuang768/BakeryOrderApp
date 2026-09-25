@@ -75,7 +75,7 @@ npm run build
 5. Output directory 設為 `dist`。Node.js 使用 22（見 `.nvmrc`）。
 6. 完成第一次部署。
 7. 用 `pages.dev` 網址測試畫面、計算與離線。
-8. 測試加入主畫面與重新整理不會 404。`public/_redirects` 會在建置時複製到 `dist`，內容是 `/* /index.html 200`。
+8. 測試加入主畫面與重新整理不會 404。Cloudflare Pages 會自動處理 SPA 路由，PWA 離線導覽則由 Workbox 的 `navigateFallback` 處理。
 9. 確認沒問題後再設定自訂網域，例如 `order.example.xyz`。
 10. 修改 DNS 前先確認網域擁有權與目前用途。
 

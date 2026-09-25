@@ -13,7 +13,6 @@
 - `src/lib/storage.ts`：IndexedDB
 - `src/lib/seed.ts`：僅供比對舊示範資料，App 不會自動寫入
 - `src/lib/forms.ts`：麵包與原料表單驗證
-- `public/_redirects`：Cloudflare Pages 的 SPA fallback
 - `src/pages`：今日叫貨、配方、原料、歷史紀錄、設定
 - `public/pwa-192.png`、`public/pwa-512.png`、`public/apple-touch-icon.png`：安裝圖示
 

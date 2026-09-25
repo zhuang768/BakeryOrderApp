@@ -20,9 +20,14 @@ export default defineConfig({
         background_color: "#FFFFFF",
         theme_color: "#1A1A1A",
         icons: [
-          { src: "pwa-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
-          { src: "pwa-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
-          { src: "pwa-maskable-512.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
+          { src: "pwa-192.png", sizes: "384x384", type: "image/png", purpose: "any" },
+          { src: "pwa-512.png", sizes: "1024x1024", type: "image/png", purpose: "any" },
+          {
+            src: "pwa-maskable-512.png",
+            sizes: "1024x1024",
+            type: "image/png",
+            purpose: "maskable",
+          },
         ],
       },
       workbox: {

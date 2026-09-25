@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-import redirects from "../../public/_redirects?raw";
 import config from "../../vite.config.ts?raw";
 import { blankCatalog, isPristineDemo, leftoverDemoIds } from "./demo";
 import { emptyDraft, seedBreads, seedIngredients } from "./seed";
@@ -18,11 +17,13 @@ describe("示範資料與部署檔", () => {
     expect(leftovers.breadIds.length).toBe(4);
   });
 
-  it("PWA manifest、圖示與 Pages fallback 存在", () => {
+  it("PWA manifest、圖示與離線導覽 fallback 存在", () => {
     expect(config).toContain("pwa-192.png");
     expect(config).toContain("pwa-512.png");
     expect(config).toContain("pwa-maskable-512.png");
+    expect(config).toContain('sizes: "384x384"');
+    expect(config).toContain('sizes: "1024x1024"');
     expect(config).toContain('start_url: "/"');
-    expect(redirects.trim()).toBe("/*    /index.html   200");
+    expect(config).toContain('navigateFallback: "/index.html"');
   });
 });
