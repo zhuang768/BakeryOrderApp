@@ -1,0 +1,3 @@
+public/_redirects
+dist
+.playwright-cli
